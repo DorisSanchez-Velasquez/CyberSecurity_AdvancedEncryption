@@ -1,4 +1,6 @@
 public class AES_Encryption{
+
+    //INITIALIZE S-BOX VARIABLE (FINAL) HERE
     public static void main(String args[])
     {
         //Initial inputs of plaintext, key, and the key size
@@ -30,6 +32,55 @@ public class AES_Encryption{
          */
         return "";
     }
+
+    //FUNCTION FOR SUBSTITUTION BYTES
+    //Each byte is usbtituted with anotehr byte from a lookup table, SBox. 
+    //The result is a 4*4 matrix, this is the new state matrix.
+    public static String[][] SubBytes(String[][] stateMatrix, String[][] SBox)
+    {
+        /*
+         * Take the current state matrix and iterate through each value
+         * Replace each value with value from the substitution box
+         * Return the new state matrix
+         */
+        return stateMatrix;
+    }
+
+    //FUNCTION FOR SHIFTING ROWS
+    //Each row is shifted to the left a particular amount of times
+    public static String[][] ShiftRows(String[][] stateMatrix)
+    {
+        /*
+         * Each row is shifted a particular number of times.
+         * Note:
+         * First row is not shifted
+         * The second row is shifted once to the left
+         * The third row is shifted twice to the left
+         * The fourth row is shfited three times to the left
+         */
+        return stateMatrix;
+    }
+
+    //FUNCTION FOR MIXING THE COLUMNS
+    public static String[][] MixColumns(String[][] stateMatrix)
+    {
+        /*
+         * This step consists of matrix multiplication. Each column is multiplied with a specific column in the state matrix
+         * And the position of each byte is changed
+         * Identify the location of the current byte and multiply the location of these columns
+         */
+        return stateMatrix;
+    }
+
+    public static String[][] addRoundKeys(String[][] stateMatrix)
+    {
+        /*
+         * The result from the mix columns matrix is XOR-ed with the round key and every byte is changed.
+         */
+
+         return stateMatrix;
+    }
+
 
 
 }
