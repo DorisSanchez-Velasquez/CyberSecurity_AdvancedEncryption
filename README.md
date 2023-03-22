@@ -1,30 +1,30 @@
 # CyberSecurity_AdvancedEncryption
-Implementing an advanced encryption algorithm using AES encryption and decryption
+**Implementing an advanced encryption algorithm using AES encryption and decryption.**
 
 ## Program Requirements
-[] Write a program to support the AES-192 and AES-256 key sizes in addition to the AES-128 key size. Implementation should take as input a plain-text, a key, and a key-size (128, 192, or 256 bits), and output the corresponding cipher text.
+[ ] Write a program to support the AES-192 and AES-256 key sizes in addition to the AES-128 key size. Implementation should take as input a plain-text, a key, and a key-size (128, 192, or 256 bits), and output the corresponding cipher text.
 
-[] Implement a key expansion algorithm program for AES. Your implementation should take as input a 128 bit, 192 bit, or 256 bit key, and output a set of round keys for use in AES encryption and decryption.
+[ ] Implement a key expansion algorithm program for AES. Your implementation should take as input a 128 bit, 192 bit, or 256 bit key, and output a set of round keys for use in AES encryption and decryption.
 
 ## Testing Requirements
 To test and verify the accuracy of the program, please use the following inputs and outputs.
 
 ### Part 1 Testing:
-Input:
+**Input**:
 - Plain-text:  00112233445566778899aabbccddeeff
 - Key:  000102030405060708090a0b0c0d0e0f1011121314151617
 - Key size:  192 bits
 
 
-Output: (Program should output the following cipher-text)
+**Output: (Program should output the following cipher-text)**
 - Cipher-text: dda97ca4864cdfe06eaf70a0ec0d7191
 
 ### Part 2 Testing: Key Expansion
-Input:
+**Input:**
 - Key:  000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f
 
 
-Output:
+**Output:**
 - Round 0 Key: 000102030405060708090a0b0c0d0e0f
 - Round 1 Key: d6aa74fdd2af72fadaa678f1d6ab76fe
 - Round 2 Key: b692cf0b643dbdf1be9bc5006830b3fe
