@@ -2,9 +2,9 @@
 **Implementing an advanced encryption algorithm using AES encryption and decryption.**
 
 ## Program Requirements
-[ ] Write a program to support the AES-192 and AES-256 key sizes in addition to the AES-128 key size. Implementation should take as input a plain-text, a key, and a key-size (128, 192, or 256 bits), and output the corresponding cipher text.
+- [ ] Write a program to support the AES-192 and AES-256 key sizes in addition to the AES-128 key size. Implementation should take as input a plain-text, a key, and a key-size (128, 192, or 256 bits), and output the corresponding cipher text.
 
-[ ] Implement a key expansion algorithm program for AES. Your implementation should take as input a 128 bit, 192 bit, or 256 bit key, and output a set of round keys for use in AES encryption and decryption.
+- [ ] Implement a key expansion algorithm program for AES. Your implementation should take as input a 128 bit, 192 bit, or 256 bit key, and output a set of round keys for use in AES encryption and decryption.
 
 ## Testing Requirements
 To test and verify the accuracy of the program, please use the following inputs and outputs.
