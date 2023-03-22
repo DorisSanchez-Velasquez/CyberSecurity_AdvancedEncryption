@@ -29,12 +29,28 @@ public class AES_Encryption{
          */
         String plaintext = "00112233445566778899aabbccddeeff";
         String key = "000102030405060708090a0b0c0d0e0f1011121314151617";
-        String keysize = "192 bits";
+        int keysize = 192;
+        int rounds = 1;
+
+        if(keysize == 128)
+        {
+            rounds = 10;
+        }
+        else if(keysize == 192)
+        {
+            rounds = 12;
+        }
+        else if(keysize == 256)
+        {
+            rounds = 14;
+        }
+
+        encryptingPlaintext(plaintext, key, keysize, rounds);
     }
 
     //Main  function for encrypting plaintext using AES implementation from scratch
     //Should take in the plaintext, key, and key sizes as input and output a ciphertext
-    public static String encryptingPlaintext(String plaintext, String key, int keysize)
+    public static String encryptingPlaintext(String plaintext, String key, int keysize, int rounds)
     {
         /*
          * Pseudocode:
@@ -47,6 +63,7 @@ public class AES_Encryption{
          * Return the new ciphertext
          * Note: For round 0, only implement the add round key step and use this new key going forward
          */
+
         return "";
     }
 
