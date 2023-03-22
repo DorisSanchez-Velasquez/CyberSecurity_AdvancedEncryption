@@ -48,6 +48,24 @@ public class AES_Encryption{
         encryptingPlaintext(plaintext, key, keysize, rounds);
     }
 
+/*
+ * HELPER FUNCTIONS TO COMPLETE MINIMAL TASKS OF FINDING ROUNDS AND CREATING STATE MATRICES ----------------------------------------------------------------------------------------------------------------------
+ */
+
+    public static byte[][] createStateMatrix(String plaintext, byte[][] matrix)
+    {
+        //Loop 
+        return matrix;
+    }
+
+
+
+/* ---------------------------------------------------------------------------------- ----------------------------
+ * FUNCTIONS OF AES ENCRYPTION --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * ----------------------------------------------------------------------------------------------------------
+ */
+
+
     //Main  function for encrypting plaintext using AES implementation from scratch
     //Should take in the plaintext, key, and key sizes as input and output a ciphertext
     public static String encryptingPlaintext(String plaintext, String key, int keysize, int rounds)
