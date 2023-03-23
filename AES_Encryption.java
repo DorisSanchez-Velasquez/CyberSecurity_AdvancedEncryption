@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class AES_Encryption{
 
     //INITIALIZE S-BOX VARIABLE (FINAL) HERE
@@ -52,10 +54,20 @@ public class AES_Encryption{
  * HELPER FUNCTIONS TO COMPLETE MINIMAL TASKS OF FINDING ROUNDS AND CREATING STATE MATRICES ----------------------------------------------------------------------------------------------------------------------
  */
 
-    public static byte[][] createStateMatrix(String plaintext, byte[][] matrix)
+    public static byte[][] createStateMatrix(String plaintext)
     {
-        //Loop 
-        return matrix;
+        int matrixSize = (int) Math.sqrt(plaintext.length());
+        byte[][] plaintextMatrix = new byte[matrixSize][matrixSize];
+
+        for(int row = 0; row < matrixSize; row++)
+        {
+            for(int column = 0; column < matrixSize; column++)
+            {
+                //whoop there it is
+            }
+        }
+
+        return plaintextMatrix;
     }
 
 
