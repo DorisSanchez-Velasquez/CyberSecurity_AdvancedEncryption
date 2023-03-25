@@ -47,25 +47,48 @@ public class AES_Encryption{
             rounds = 14;
         }
 
-        encryptingPlaintext(plaintext, key, keysize, rounds);
+        createStateMatrix(plaintext);
+        //encryptingPlaintext(plaintext, key, keysize, rounds);
     }
 
 /*
  * HELPER FUNCTIONS TO COMPLETE MINIMAL TASKS OF FINDING ROUNDS AND CREATING STATE MATRICES ----------------------------------------------------------------------------------------------------------------------
  */
 
-    public static byte[][] createStateMatrix(String plaintext)
+    public static void printMatrix(String[][] matrix)
     {
-        int matrixSize = (int) Math.sqrt(plaintext.length());
-        byte[][] plaintextMatrix = new byte[matrixSize][matrixSize];
+        for (int row = 0; row < matrix.length; row++)
+        {
+            for (int column = 0; column < matrix.length; column++)
+            {
+                System.out.print(matrix[row][column] + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    public static String[][] createStateMatrix(String plaintext)
+    {
+        int matrixSize = (int)Math.sqrt(plaintext.length()/2);
+        int index = 0;
+
+        String[][] plaintextMatrix = new String[matrixSize][matrixSize];
 
         for(int row = 0; row < matrixSize; row++)
         {
             for(int column = 0; column < matrixSize; column++)
             {
-                //whoop there it is
+                if(index < plaintext.length())
+                {
+                    String hexValue = plaintext.substring(index, index+2);
+                    plaintextMatrix[column][row] = hexValue;
+                    index+=2;
+                }
             }
         }
+
+        //print
+        printMatrix(plaintextMatrix);
 
         return plaintextMatrix;
     }
